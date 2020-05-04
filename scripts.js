@@ -23,8 +23,8 @@ let appData = {
 
 function chooseExpenses() {
     for (let i = 0; i < 2; i++) {
-        a = prompt("Введите обязательную статью расходов в этом месяце (Попытка " + (i + 1) + ")", "Похавать");
-        b = +prompt("Во сколько обойдётся?", "30000");
+        let a = prompt("Введите обязательную статью расходов в этом месяце (Попытка " + (i + 1) + ")", "Похавать"),
+            b = +prompt("Во сколько обойдётся?", "30000");
         if (typeof(a) === "string" && typeof(a) != null && a != "" && typeof(b) === "number" && typeof(b) != null && b != "" && a.length < 50) {
             appData.expense[a] = b;
         }
